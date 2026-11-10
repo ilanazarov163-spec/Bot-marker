@@ -2,6 +2,7 @@ services:
   - type: web
     name: Bot-marker
     runtime: python
+    pythonVersion: 3.11
     buildCommand: pip install -r requirements.txt
     startCommand: python app.py
     envVars:
