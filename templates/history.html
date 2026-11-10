@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>История клипов - CS2 Clip Maker</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <span class="logo-icon">🎬</span>
+                <h1>CS2 Clip Maker</h1>
+            </div>
+            <nav class="nav">
+                <a href="/" class="nav-link">Главная</a>
+                <a href="/history" class="nav-link active">История</a>
+                <a href="/settings" class="nav-link">Настройки</a>
+            </nav>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main">
+            <section class="history-section">
+                <div class="section-header">
+                    <h2 class="section-title">История клипов</h2>
+                    <button id="clearHistoryBtn" class="btn btn-danger">
+                        <span class="btn-icon">🗑️</span>
+                        Очистить историю
+                    </button>
+                </div>
+
+                <div id="clipsList" class="clips-list">
+                    <!-- Clips will be inserted here -->
+                    <div class="empty-state" id="emptyState">
+                        <span class="empty-icon">📝</span>
+                        <h3>Нет сохранённых клипов</h3>
+                        <p>Создайте первый клип, чтобы он появился здесь</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>© 2024 CS2 Clip Maker. Создавай крутые клипы!</p>
+        </footer>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/history.js') }}"></script>
+</body>
+</html>
