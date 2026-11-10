@@ -8,11 +8,11 @@ services:
       - key: SECRET_KEY
         value: cs2-clip-maker-secret-key-2024
       - key: DEBUG
-        value: False
+        value: "False"
       - key: HOST
         value: 0.0.0.0
       - key: PORT
-        value: 5000
+        value: "5000"
       - key: TELEGRAM_BOT_TOKEN
         value: ""
       - key: TELEGRAM_CHAT_ID
