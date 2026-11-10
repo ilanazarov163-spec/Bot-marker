@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CS2 Clip Maker</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <span class="logo-icon">🎬</span>
+                <h1>CS2 Clip Maker</h1>
+            </div>
+            <nav class="nav">
+                <a href="/" class="nav-link active">Главная</a>
+                <a href="/history" class="nav-link">История</a>
+                <a href="/settings" class="nav-link">Настройки</a>
+            </nav>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main">
+            <!-- Hero Section -->
+            <section class="hero">
+                <h2 class="hero-title">Создавай крутые CS2-клипы</h2>
+                <p class="hero-subtitle">Анализируй видео, находи интересные моменты и создавай клипы в TikTok формате</p>
+            </section>
+
+            <!-- Input Section -->
+            <section class="input-section">
+                <div class="input-card">
+                    <div class="input-icon">🔗</div>
+                    <h3>Вставьте YouTube ссылку</h3>
+                    <div class="input-wrapper">
+                        <input 
+                            type="text" 
+                            id="youtubeUrl" 
+                            class="input-field" 
+                            placeholder="https://youtube.com/watch?v=..."
+                            autocomplete="off"
+                        >
+                        <button id="processBtn" class="btn btn-primary">
+                            <span class="btn-icon">▶</span>
+                            Обработать
+                        </button>
+                    </div>
+                    <p class="input-hint">Видео должно содержать контент CS2</p>
+                </div>
+            </section>
+
+            <!-- Progress Section -->
+            <section id="progressSection" class="progress-section hidden">
+                <div class="progress-card">
+                    <div class="progress-header">
+                        <span class="progress-icon">⏳</span>
+                        <h3>Обработка видео</h3>
+                    </div>
+                    <div class="progress-bar-container">
+                        <div id="progressBar" class="progress-bar"></div>
+                        <span id="progressText" class="progress-text">0%</span>
+                    </div>
+                    <div id="progressSteps" class="progress-steps">
+                        <div class="step" data-step="1">
+                            <span class="step-icon">📥</span>
+                            <span class="step-text">Скачивание видео</span>
+                        </div>
+                        <div class="step" data-step="2">
+                            <span class="step-icon">🧠</span>
+                            <span class="step-text">Анализ с помощью ИИ</span>
+                        </div>
+                        <div class="step" data-step="3">
+                            <span class="step-icon">✂️</span>
+                            <span class="step-text">Вырезание клипов</span>
+                        </div>
+                        <div class="step" data-step="4">
+                            <span class="step-icon">🎨</span>
+                            <span class="step-text">Добавление эффектов</span>
+                        </div>
+                        <div class="step" data-step="5">
+                            <span class="step-icon">📝</span>
+                            <span class="step-text">Добавление субтитров</span>
+                        </div>
+                        <div class="step" data-step="6">
+                            <span class="step-icon">✅</span>
+                            <span class="step-text">Готово!</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Result Section -->
+            <section id="resultSection" class="result-section hidden">
+                <div class="result-card">
+                    <div class="result-header">
+                        <span class="result-icon">🎉</span>
+                        <h3>Готово!</h3>
+                    </div>
+                    <div id="resultClips" class="clips-grid">
+                        <!-- Clips will be inserted here -->
+                    </div>
+                    <button id="newClipBtn" class="btn btn-secondary">
+                        <span class="btn-icon">➕</span>
+                        Создать новый клип
+                    </button>
+                </div>
+            </section>
+
+            <!-- Features Section -->
+            <section class="features-section">
+                <h3 class="features-title">Возможности</h3>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <span class="feature-icon">🎯</span>
+                        <h4>AI Анализ</h4>
+                        <p>ИИ автоматически находит интересные моменты в видео</p>
+                    </div>
+                    <div class="feature-card">
+                        <span class="feature-icon">📱</span>
+                        <h4>TikTok Формат</h4>
+                        <p>9:16, 1080×1920 для идеального просмотра на телефоне</p>
+                    </div>
+                    <div class="feature-card">
+                        <span class="feature-icon">✨</span>
+                        <h4>Эффекты</h4>
+                        <p>Размытый фон и увеличенный центр</p>
+                    </div>
+                    <div class="feature-card">
+                        <span class="feature-icon">📝</span>
+                        <h4>Субтитры</h4>
+                        <p>Белые жирные субтитры с обводкой</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>© 2024 CS2 Clip Maker. Создавай крутые клипы!</p>
+        </footer>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
