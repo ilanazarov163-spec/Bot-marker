@@ -2,7 +2,7 @@ services:
   - type: web
     name: Bot-marker
     runtime: python
-    pythonVersion: "3.14..10"
+    pythonVersion: "3.14.10"
     buildCommand: "pip install setuptools wheel && pip install -r requirements.txt"
     startCommand: python app.py
     envVars:
