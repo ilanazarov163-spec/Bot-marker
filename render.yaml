@@ -2,7 +2,7 @@ services:
   - type: web
     name: Bot-marker
     runtime: python
-    pythonVersion: 3.11
+    pythonVersion: "3.14.10"
     buildCommand: pip install -r requirements.txt
     startCommand: python app.py
     envVars:
@@ -19,7 +19,7 @@ services:
       - key: TELEGRAM_CHAT_ID
         generateValue: true
       - key: FFMPEG_BINARY
-        value: ffmpeg
+        generateValue: true
       - key: WHISPER_MODEL
         value: base
       - key: WHISPER_LANGUAGE
