@@ -10,7 +10,7 @@ ffmpeg-python==0.2.0
 
 # AI / Speech recognition
 openai-whisper>=20231117,<20231201
-torch==2.1.0
+torch==2.2.0
 
 # Telegram bot
 python-telegram-bot==20.7
